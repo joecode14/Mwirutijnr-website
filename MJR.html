@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MWIRUTI JNR - Kenya's trusted marketplace for quality second-hand motorcycles based in Embu Town. Buy and sell motorcycles with confidence.">
+    <title>MWIRUTI JNR - Premium Second Hand Motorcycles in Kenya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-orange-600">MWIRUTI JNR</div>
+            <div id="mobileMenu" class="hidden md:flex space-x-6">
+                <a href="#featured" class="text-gray-700 hover:text-orange-600 transition">Motorcycles</a>
+                <a href="#sell" class="text-gray-700 hover:text-orange-600 transition">Sell</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange-600 transition">Contact</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileDropdown" class="md:hidden hidden bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#featured" class="text-gray-700 hover:text-orange-600 transition py-2">Motorcycles</a>
+                <a href="#sell" class="text-gray-700 hover:text-orange-600 transition py-2">Sell</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange-600 transition py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 text-white py-8 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-1/4 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex items-center justify-center gap-6">
+                <!-- Motorcycle Icon -->
+                <svg class="w-20 h-20 hidden md:block" viewBox="0 0 100 100" fill="none">
+                    <circle cx="25" cy="70" r="12" stroke="#F97316" stroke-width="3" fill="none"/>
+                    <circle cx="25" cy="70" r="8" stroke="#F97316" stroke-width="2" fill="none"/>
+                    <circle cx="75" cy="70" r="12" stroke="#F97316" stroke-width="3" fill="none"/>
+                    <circle cx="75" cy="70" r="8" stroke="#F97316" stroke-width="2" fill="none"/>
+                    <path d="M25 70 L40 70 L50 50 L60 50 L70 70 L75 70" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M45 50 L55 50" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M60 50 L60 35 L70 35" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="70" cy="35" r="3" fill="#F97316"/>
+                    <ellipse cx="50" cy="45" rx="8" ry="6" fill="#F97316" opacity="0.8"/>
+                    <path d="M40 70 L35 75 L40 75" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M60 50 L72 60" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                
+                <div class="text-center">
+                    <h1 class="text-3xl md:text-6xl font-black tracking-tight mb-2 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+                        MWIRUTI JNR
+                    </h1>
+                    <div class="text-base md:text-2xl font-bold tracking-wider uppercase text-orange-400">
+                        <span class="inline-block border-t-2 border-b-2 border-orange-400/50 py-1 px-6">Second Hand Motorcycles</span>
+                    </div>
+                    <p class="text-sm md:text-base text-gray-300 mt-2">🏍️ Embu Town, Kenya</p>
+                </div>
+                
+                <!-- Motorcycle Icon (mirrored) -->
+                <svg class="w-20 h-20 hidden md:block scale-x-[-1]" viewBox="0 0 100 100" fill="none">
+                    <circle cx="25" cy="70" r="12" stroke="#F97316" stroke-width="3" fill="none"/>
+                    <circle cx="25" cy="70" r="8" stroke="#F97316" stroke-width="2" fill="none"/>
+                    <circle cx="75" cy="70" r="12" stroke="#F97316" stroke-width="3" fill="none"/>
+                    <circle cx="75" cy="70" r="8" stroke="#F97316" stroke-width="2" fill="none"/>
+                    <path d="M25 70 L40 70 L50 50 L60 50 L70 70 L75 70" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M45 50 L55 50" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M60 50 L60 35 L70 35" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="70" cy="35" r="3" fill="#F97316"/>
+                    <ellipse cx="50" cy="45" rx="8" ry="6" fill="#F97316" opacity="0.8"/>
+                    <path d="M40 70 L35 75 L40 75" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M60 50 L72 60" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-2xl p-8 mb-12 text-white shadow-2xl relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Ride Your Dream Motorcycle Today</h2>
+                <p class="text-xl mb-8 text-orange-50">Kenya's trusted marketplace for quality second-hand motorcycles. Based in Embu Town.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#featured" class="bg-white text-orange-700 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition shadow-lg">Browse Motorcycles</a>
+                    <a href="#sell" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-700 transition">Sell Your Motorcycle</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Motorcycles -->
+        <section id="featured" class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold mb-3 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Featured Motorcycles</h2>
+                <p class="text-gray-600">Handpicked quality motorcycles ready for the road</p>
+                <button id="clearAllBtn" class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm transition" onclick="clearAllData()">
+                    Clear All Saved Data
+                </button>
+            </div>
+            <div id="motorcycleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div class="mt-8 text-center">
+                <button id="addNewBikeBtn" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-6 rounded-lg transition shadow-lg">
+                    <i data-feather="plus" class="inline w-5 h-5 mr-2"></i> Add New Motorcycle Listing
+                </button>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="bg-white rounded-2xl p-10 mb-16 shadow-xl">
+            <h2 class="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Why Choose MWIRUTI JNR?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <i data-feather="shield" class="text-blue-600 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Verified Listings</h3>
+                    <p class="text-gray-600">All motorcycles undergo thorough inspection before listing</p>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-green-100 to-green-200 w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <i data-feather="dollar-sign" class="text-green-600 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Best Prices</h3>
+                    <p class="text-gray-600">Competitive pricing with room for negotiation</p>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-orange-100 to-orange-200 w-20 h-20 mx-auto rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <i data-feather="map-pin" class="text-orange-600 w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-800">Embu Based</h3>
+                    <p class="text-gray-600">Local business serving all of Kenya</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-16 flex justify-center">
+            <div class="max-w-md w-full bg-white rounded-2xl shadow-xl overflow-hidden transition-all hover:shadow-2xl">
+                <div class="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 p-6 text-white">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                            <i data-feather="phone-call" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold">Contact Information</h2>
+                            <p class="opacity-90">Always available for you</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6 space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 p-3 rounded-xl text-blue-600">
+                            <i data-feather="phone" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-500">Phone Number</h3>
+                            <a href="tel:0725101417" class="text-lg font-semibold text-slate-800 hover:text-orange-600">0725 101 417</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-orange-100 p-3 rounded-xl text-orange-600">
+                            <i data-feather="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-500">Email Address</h3>
+                            <a href="mailto:ngethemuigai50@gmail.com" class="text-lg font-semibold text-slate-800 hover:text-orange-600 break-all">ngethemuigai50@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-100 p-3 rounded-xl text-green-600">
+                            <i data-feather="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-500">Location</h3>
+                            <p class="text-lg font-semibold text-slate-800">Embu Town, Kenya</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 px-6 py-4 flex justify-between items-center">
+                    <button onclick="shareContact()" class="flex items-center space-x-2 text-orange-600 font-medium hover:text-orange-700 transition">
+                        <i data-feather="share-2" class="w-5 h-5"></i>
+                        <span>Share</span>
+                    </button>
+                    <a href="tel:0725101417" class="flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg hover:from-orange-600 hover:to-orange-700 transition shadow-lg">
+                        <i data-feather="message-circle" class="w-5 h-5"></i>
+                        <span>Call Now</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sell Your Motorcycle -->
+        <section id="sell" class="bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 text-white rounded-2xl p-10 mb-16 shadow-2xl">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-4 text-center">Sell Your Motorcycle With Us</h2>
+                <p class="text-xl mb-8 text-center text-gray-300">Get the best value for your used motorcycle with our trusted selling platform.</p>
+                <form id="sellMotorcycleForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block mb-2 font-semibold">Your Name *</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-orange-500 text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-semibold">Phone Number *</label>
+                        <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-orange-500 text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-semibold">Motorcycle Model *</label>
+                        <input type="text" name="model" required class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-orange-500 text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-semibold">Year of Manufacture *</label>
+                        <input type="number" name="year" required min="1980" max="2025" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-orange-500 text-white">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block mb-2 font-semibold">Additional Details</label>
+                        <textarea name="details" rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-orange-500 text-white" placeholder="Mileage, condition, service history, etc."></textarea>
+                    </div>
+                    
+                    <!-- Photo Upload Section -->
+                    <div class="md:col-span-2">
+                        <label class="block mb-3 text-lg font-semibold">Upload Motorcycle Photos (Up to 10 photos)</label>
+                        <div class="bg-slate-900 rounded-xl p-6 border-2 border-dashed border-slate-600">
+                            <input type="file" id="motorcyclePhotos" accept="image/*" multiple class="hidden">
+                            <button type="button" onclick="document.getElementById('motorcyclePhotos').click()" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-4 px-6 rounded-lg transition shadow-lg flex items-center justify-center gap-3">
+                                <i data-feather="upload" class="w-6 h-6"></i>
+                                <span>Click to Upload Photos</span>
+                            </button>
+                            <p class="text-gray-400 text-sm text-center mt-3">JPG, PNG, HEIC or JPEG (Max 10 photos, 5MB each)</p>
+                        </div>
+                        <div id="photoPreviewGrid" class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-4"></div>
+                        <div id="photoCount" class="text-orange-400 text-sm mt-2 font-semibold"></div>
+                    </div>
+                    
+                    <button type="submit" class="md:col-span-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-lg transition shadow-xl text-lg">Submit Motorcycle Details</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold mb-3 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">What Our Customers Say</h2>
+                <p class="text-gray-600">Real experiences from motorcycle enthusiasts</p>
+            </div>
+            <div id="testimonials" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xl font-bold text-orange-500 mb-2">MWIRUTI JNR</p>
+            <p class="text-gray-400 mb-4">Premium Second Hand Motorcycles - Embu Town, Kenya</p>
+            <div class="flex justify-center gap-4 mb-4">
+                <a href="tel:0725101417" class="text-gray-400 hover:text-orange-500 transition">
+                    <i data-feather="phone" class="w-5 h-5"></i>
+                </a>
+                <a href="mailto:ngethemuigai50@gmail.com" class="text-gray-400 hover:text-orange-500 transition">
+                    <i data-feather="mail" class="w-5 h-5"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 MWIRUTI JNR. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ====================
+        // LOCALSTORAGE MANAGER
+        // ====================
+        
+        const STORAGE_KEYS = {
+            MOTORCYCLES: 'mwiruti_motorcycles',
+            TESTIMONIALS: 'mwiruti_testimonials',
+            FORM_PHOTOS: 'mwiruti_form_photos',
+            LAST_SAVED: 'mwiruti_last_saved'
+        };
+
+        // ====================
+        // INITIAL DATA (FALLBACK)
+        // ====================
+        
+        const defaultMotorcycles = [
+            {
+                id: 1,
+                name: 'SkyGo 150cc',
+                price: 'KSh 180,000',
+                description: 'Powerful and fuel-efficient 150cc motorcycle. Perfect for city commuting and weekend trips.',
+                year: '2021',
+                mileage: '8,500 km',
+                location: 'Embu',
+                image: null
+            },
+            {
+                id: 2,
+                name: 'Boxer 150cc',
+                price: 'KSh 165,000',
+                description: 'Reliable workhorse with excellent fuel economy. Well-maintained and ready to ride.',
+                year: '2020',
+                mileage: '12,000 km',
+                location: 'Embu',
+                image: null
+            },
+            {
+                id: 3,
+                name: 'Suzuki DR 200',
+                price: 'KSh 190,000',
+                description: 'Powerful off-road capability with smooth on-road performance. Well serviced.',
+                year: '2019',
+                mileage: '10,000 km',
+                location: 'Mombasa',
+                image: null
+            },
+            {
+                id: 4,
+                name: '',
+                price: '',
+                description: '',
+                year: '',
+                mileage: '',
+                location: '',
+                image: null
+            }
+        ];
+
+        const defaultTestimonials = [
+            {
+                id: 1,
+                name: 'James Mwangi',
+                location: 'Nairobi',
+                text: 'Got my Yamaha from MWIRUTI JNR last month. The motorcycle was exactly as described and the transaction was smooth.',
+                color: 'blue'
+            },
+            {
+                id: 2,
+                name: 'Sarah Wambui',
+                location: 'Embu',
+                text: 'Sold my old motorcycle through them and got a fair price. Their team was professional throughout the process.',
+                color: 'orange'
+            },
+            {
+                id: 3,
+                name: 'Peter Otieno',
+                location: 'Mombasa',
+                text: 'The motorcycle I purchased was in excellent condition. MWIRUTI JNR provided all the necessary paperwork making ownership transfer easy.',
+                color: 'green'
+            }
+        ];
+
+        // ====================
+        // STATE MANAGEMENT
+        // ====================
+        
+        let motorcycles = [];
+        let testimonials = [];
+        let uploadedPhotos = [];
+
+        // ====================
+        // LOCALSTORAGE FUNCTIONS
+        // ====================
+        
+        function saveAllData() {
+            try {
+                // Save motorcycles
+                localStorage.setItem(STORAGE_KEYS.MOTORCYCLES, JSON.stringify(motorcycles));
+                
+                // Save testimonials
+                localStorage.setItem(STORAGE_KEYS.TESTIMONIALS, JSON.stringify(testimonials));
+                
+                // Save form photos (limit to 10 for performance)
+                const photosToSave = uploadedPhotos.slice(0, 10);
+                localStorage.setItem(STORAGE_KEYS.FORM_PHOTOS, JSON.stringify(photosToSave));
+                
+                // Save timestamp
+                localStorage.setItem(STORAGE_KEYS.LAST_SAVED, new Date().toISOString());
+                
+                console.log('All data saved to localStorage');
+                showSaveNotification('Data saved successfully!');
+            } catch (error) {
+                console.error('Error saving to localStorage:', error);
+                showSaveNotification('Error saving data!', true);
+            }
+        }
+
+        function loadAllData() {
+            try {
+                // Load motorcycles
+                const savedMotorcycles = localStorage.getItem(STORAGE_KEYS.MOTORCYCLES);
+                motorcycles = savedMotorcycles ? JSON.parse(savedMotorcycles) : [...defaultMotorcycles];
+                
+                // Load testimonials
+                const savedTestimonials = localStorage.getItem(STORAGE_KEYS.TESTIMONIALS);
+                testimonials = savedTestimonials ? JSON.parse(savedTestimonials) : [...defaultTestimonials];
+                
+                // Load form photos
+                const savedPhotos = localStorage.getItem(STORAGE_KEYS.FORM_PHOTOS);
+                uploadedPhotos = savedPhotos ? JSON.parse(savedPhotos) : [];
+                
+                console.log('Data loaded from localStorage');
+                
+                // Show last saved time
+                const lastSaved = localStorage.getItem(STORAGE_KEYS.LAST_SAVED);
+                if (lastSaved) {
+                    console.log('Last saved:', new Date(lastSaved).toLocaleString());
+                }
+                
+            } catch (error) {
+                console.error('Error loading from localStorage:', error);
+                // Use defaults if there's an error
+                motorcycles = [...defaultMotorcycles];
+                testimonials = [...defaultTestimonials];
+                uploadedPhotos = [];
+            }
+        }
+
+        function clearAllData() {
+            if (confirm('Are you sure you want to clear ALL saved data? This cannot be undone!')) {
+                localStorage.clear();
+                motorcycles = [...defaultMotorcycles];
+                testimonials = [...defaultTestimonials];
+                uploadedPhotos = [];
+                
+                renderMotorcycles();
+                renderTestimonials();
+                renderPhotoPreview();
+                
+                showSaveNotification('All data cleared!', true);
+            }
+        }
+
+        function showSaveNotification(message, isError = false) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-4 py-3 rounded-lg shadow-lg z-50 transition-all transform translate-x-0 ${
+                isError ? 'bg-red-500 text-white' : 'bg-green-500 text-white'
+            }`;
+            notification.innerHTML = `
+                <div class="flex items-center">
+                    <i data-feather="${isError ? 'alert-triangle' : 'check-circle'}" class="w-5 h-5 mr-2"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            feather.replace();
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // ====================
+        // AUTO-SAVE DEBOUNCER
+        // ====================
+        
+        let saveTimeout;
+        function autoSave() {
+            clearTimeout(saveTimeout);
+            saveTimeout = setTimeout(saveAllData, 1000); // Save 1 second after last change
+        }
+
+        // ====================
+        // MOTORCYCLES FUNCTIONS
+        // ====================
+        
+        function renderMotorcycles() {
+            const grid = document.getElementById('motorcycleGrid');
+            grid.innerHTML = motorcycles.map((bike, index) => `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all">
+                    <!-- Image Upload Area -->
+                    <div class="relative w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group cursor-pointer" 
+                         onclick="document.getElementById('imageUpload${bike.id}').click()"
+                         aria-label="Upload image for ${bike.name || 'motorcycle'}">
+                        ${bike.image ? `
+                            <img id="bikeImage${bike.id}" src="${bike.image}" alt="${bike.name || 'Motorcycle image'}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <i data-feather="upload" class="w-8 h-8 mx-auto mb-2"></i>
+                                    <p class="text-sm font-semibold">Click to change image</p>
+                                </div>
+                            </div>
+                            <button type="button" 
+                                    onclick="event.stopPropagation(); removeMotorcycleImage(${bike.id})" 
+                                    class="absolute top-2 right-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-red-600 transition opacity-0 group-hover:opacity-100 font-bold z-10"
+                                    aria-label="Remove image">
+                                ×
+                            </button>
+                        ` : `
+                            <div class="text-center text-gray-400">
+                                <i data-feather="camera" class="w-12 h-12 mx-auto mb-3"></i>
+                                <p class="font-semibold">Click to Upload Image</p>
+                                <p class="text-sm mt-1">JPG, PNG, JPEG</p>
+                            </div>
+                        `}
+                        <input type="file" 
+                               id="imageUpload${bike.id}" 
+                               accept="image/jpeg,image/jpg,image/png" 
+                               class="hidden" 
+                               onchange="handleMotorcycleImageUpload(event, ${bike.id})">
+                    </div>
+
+                    <!-- Editable Details -->
+                    <div class="p-5">
+                        <input type="text" 
+                               value="${bike.name}" 
+                               placeholder="Enter motorcycle name..."
+                               oninput="updateMotorcycle(${bike.id}, 'name', this.value)"
+                               class="text-xl font-bold mb-2 text-slate-800 w-full border-b-2 border-transparent hover:border-orange-300 focus:border-orange-500 focus:outline-none transition">
+                        
+                        <input type="text" 
+                               value="${bike.price}" 
+                               placeholder="Enter price (e.g., KSh 180,000)..."
+                               oninput="updateMotorcycle(${bike.id}, 'price', this.value)"
+                               class="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-3 w-full border-b-2 border-transparent hover:border-orange-300 focus:border-orange-500 focus:outline-none transition">
+                        
+                        <textarea 
+                               placeholder="Enter description..."
+                               oninput="updateMotorcycle(${bike.id}, 'description', this.value)"
+                               class="text-gray-600 mb-3 w-full border-2 border-transparent hover:border-orange-300 focus:border-orange-500 rounded-lg p-2 focus:outline-none transition resize-none" 
+                               rows="2">${bike.description}</textarea>
+                        
+                        <div class="flex justify-between text-sm text-gray-500 border-t pt-3 gap-2">
+                            <div class="flex items-center gap-1">
+                                <i data-feather="calendar" class="w-4 h-4"></i>
+                                <input type="text" 
+                                       value="${bike.year}" 
+                                       placeholder="Year"
+                                       oninput="updateMotorcycle(${bike.id}, 'year', this.value)"
+                                       class="w-16 border-b border-transparent hover:border-orange-300 focus:border-orange-500 focus:outline-none">
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-feather="activity" class="w-4 h-4"></i>
+                                <input type="text" 
+                                       value="${bike.mileage}" 
+                                       placeholder="Mileage"
+                                       oninput="updateMotorcycle(${bike.id}, 'mileage', this.value)"
+                                       class="w-20 border-b border-transparent hover:border-orange-300 focus:border-orange-500 focus:outline-none">
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i data-feather="map-pin" class="w-4 h-4"></i>
+                                <input type="text" 
+                                       value="${bike.location}" 
+                                       placeholder="Location"
+                                       oninput="updateMotorcycle(${bike.id}, 'location', this.value)"
+                                       class="w-20 border-b border-transparent hover:border-orange-300 focus:border-orange-500 focus:outline-none">
+                            </div>
+                        </div>
+                        
+                        <!-- Delete button for empty listings -->
+                        ${!bike.name && !bike.price ? `
+                            <button type="button" 
+                                    onclick="deleteMotorcycle(${bike.id})" 
+                                    class="mt-4 w-full bg-red-50 text-red-600 hover:bg-red-100 py-2 rounded-lg transition text-sm font-semibold">
+                                <i data-feather="trash-2" class="inline w-4 h-4 mr-2"></i> Remove Empty Listing
+                            </button>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+            feather.replace();
+        }
+
+        function updateMotorcycle(id, field, value) {
+            const bike = motorcycles.find(b => b.id === id);
+            if (bike) {
+                bike[field] = value;
+                autoSave(); // Trigger auto-save
+            }
+        }
+
+        function handleMotorcycleImageUpload(event, bikeId) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            // Validate file type
+            const validTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+            if (!validTypes.includes(file.type)) {
+                alert('Please upload a JPG, JPEG, or PNG image');
+                event.target.value = '';
+                return;
+            }
+
+            // Validate file size (max 5MB)
+            if (file.size > 5 * 1024 * 1024) {
+                alert('Image size must be less than 5MB');
+                event.target.value = '';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const bike = motorcycles.find(b => b.id === bikeId);
+                if (bike) {
+                    bike.image = e.target.result;
+                    renderMotorcycles();
+                    autoSave(); // Save after image upload
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function removeMotorcycleImage(bikeId) {
+            const bike = motorcycles.find(b => b.id === bikeId);
+            if (bike) {
+                bike.image = null;
+                renderMotorcycles();
+                autoSave(); // Save after removing image
+            }
+        }
+
+        function deleteMotorcycle(id) {
+            motorcycles = motorcycles.filter(b => b.id !== id);
+            renderMotorcycles();
+            autoSave();
+        }
+
+        function addNewMotorcycle() {
+            const newId = motorcycles.length > 0 ? Math.max(...motorcycles.map(b => b.id)) + 1 : 1;
+            motorcycles.push({
+                id: newId,
+                name: '',
+                price: '',
+                description: '',
+                year: '',
+                mileage: '',
+                location: '',
+                image: null
+            });
+            renderMotorcycles();
+            autoSave();
+            
+            // Scroll to new listing
+            setTimeout(() => {
+                document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+
+        // ====================
+        // TESTIMONIALS FUNCTIONS
+        // ====================
+        
+        function renderTestimonials() {
+            const container = document.getElementById('testimonials');
+            const colorClasses = {
+                blue: 'from-blue-400 to-blue-600',
+                orange: 'from-orange-400 to-orange-600',
+                green: 'from-green-400 to-green-600'
+            };
+            
+            container.innerHTML = testimonials.map(t => `
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br ${colorClasses[t.color]} flex items-center justify-center mr-4">
+                            <i data-feather="user" class="text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <input type="text" 
+                                   value="${t.name}" 
+                                   oninput="updateTestimonial(${t.id}, 'name', this.value)"
+                                   class="font-semibold text-slate-800 w-full border-b border-transparent hover:border-orange-300 focus:border-orange-500 focus:outline-none">
+                            <input type="text" 
+                                   value="${t.location}" 
+                                   oninput="updateTestimonial(${t.id}, 'location', this.value)"
+                                   class="text-gray-500 text-sm w-full border-b border-transparent hover:border-orange-300 focus:border-orange-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <textarea 
+                           oninput="updateTestimonial(${t.id}, 'text', this.value)"
+                           class="text-gray-700 w-full border-2 border-transparent hover:border-orange-300 focus:border-orange-500 rounded-lg p-2 focus:outline-none transition resize-none" 
+                           rows="3">${t.text}</textarea>
+                    
+                    <div class="mt-4 flex justify-between items-center">
+                        <select onchange="updateTestimonial(${t.id}, 'color', this.value)" 
+                                class="text-sm border rounded-lg px-2 py-1">
+                            <option value="blue" ${t.color === 'blue' ? 'selected' : ''}>Blue</option>
+                            <option value="orange" ${t.color === 'orange' ? 'selected' : ''}>Orange</option>
+                            <option value="green" ${t.color === 'green' ? 'selected' : ''}>Green</option>
+                        </select>
+                        
+                        <button type="button" 
+                                onclick="deleteTestimonial(${t.id})" 
+                                class="text-red-500 hover:text-red-700 text-sm">
+                            <i data-feather="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add New Testimonial Button
+            container.innerHTML += `
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer hover:border-orange-400 transition"
+                     onclick="addNewTestimonial()">
+                    <i data-feather="plus" class="w-12 h-12 text-gray-400 mb-3"></i>
+                    <p class="font-semibold text-gray-500">Add New Testimonial</p>
+                    <p class="text-sm text-gray-400 mt-1">Click to add customer review</p>
+                </div>
+            `;
+            
+            feather.replace();
+        }
+
+        function updateTestimonial(id, field, value) {
+            const testimonial = testimonials.find(t => t.id === id);
+            if (testimonial) {
+                testimonial[field] = value;
+                autoSave();
+            }
+        }
+
+        function deleteTestimonial(id) {
+            if (confirm('Delete this testimonial?')) {
+                testimonials = testimonials.filter(t => t.id !== id);
+                renderTestimonials();
+                autoSave();
+            }
+        }
+
+        function addNewTestimonial() {
+            const newId = testimonials.length > 0 ? Math.max(...testimonials.map(t => t.id)) + 1 : 1;
+            const colors = ['blue', 'orange', 'green'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            testimonials.push({
+                id: newId,
+                name: 'New Customer',
+                location: 'Location',
+                text: 'Enter testimonial text here...',
+                color: randomColor
+            });
+            
+            renderTestimonials();
+            autoSave();
+        }
+
+        // ====================
+        // FORM PHOTOS FUNCTIONS
+        // ====================
+        
+        document.getElementById('motorcyclePhotos').addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            const remaining = 10 - uploadedPhotos.length;
+            
+            if (files.length > remaining) {
+                alert(`You can only upload ${remaining} more photo(s)`);
+                return;
+            }
+
+            files.forEach(file => {
+                if (file.size > 5 * 1024 * 1024) {
+                    alert(`${file.name} is too large. Max size is 5MB`);
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    uploadedPhotos.push({file, url: event.target.result});
+                    renderPhotoPreview();
+                    autoSave(); // Save photos to localStorage
+                };
+                reader.readAsDataURL(file);
+            });
+            
+            e.target.value = '';
+        });
+
+        function renderPhotoPreview() {
+            const grid = document.getElementById('photoPreviewGrid');
+            const count = document.getElementById('photoCount');
+            
+            grid.innerHTML = uploadedPhotos.map((photo, i) => `
+                <div class="relative group">
+                    <img src="${photo.url}" alt="Uploaded photo ${i + 1}" class="w-full h-24 object-cover rounded-lg shadow border-2 border-orange-200">
+                    <button type="button" 
+                            onclick="removePhoto(${i})" 
+                            class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-red-600 transition font-bold"
+                            aria-label="Remove photo">
+                        ×
+                    </button>
+                </div>
+            `).join('');
+            
+            count.textContent = `${uploadedPhotos.length}/10 photos uploaded`;
+            if (uploadedPhotos.length === 10) {
+                count.innerHTML += ' <span class="text-red-400">(Maximum reached)</span>';
+            }
+            
+            feather.replace();
+        }
+
+        function removePhoto(index) {
+            uploadedPhotos.splice(index, 1);
+            renderPhotoPreview();
+            autoSave(); // Update localStorage
+        }
+
+        // ====================
+        // FORM SUBMISSION
+        // ====================
+        
+        document.getElementById('sellMotorcycleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (uploadedPhotos.length === 0) {
+                alert('Please upload at least one photo of your motorcycle');
+                return;
+            }
+
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create WhatsApp message
+            let message = `🏍️ *NEW MOTORCYCLE INQUIRY*\n\n`;
+            message += `👤 *Name:* ${data.name}\n`;
+            message += `📱 *Phone:* ${data.phone}\n`;
+            message += `🏍️ *Motorcycle Model:* ${data.model}\n`;
+            message += `📅 *Year:* ${data.year}\n`;
+            if (data.details) {
+                message += `📝 *Details:* ${data.details}\n`;
+            }
+            message += `\n📸 *Photos Uploaded:* ${uploadedPhotos.length} photo(s)`;
+            message += `\n\n_Submitted via MWIRUTI JNR Website_`;
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = '254725101417';
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+            
+            alert('Opening WhatsApp to send your inquiry...\n\nNote: Photos will need to be sent separately in WhatsApp.');
+        });
+
+        // ====================
+        // MOBILE MENU FUNCTIONALITY
+        // ====================
+        
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const dropdown = document.getElementById('mobileDropdown');
+            dropdown.classList.toggle('hidden');
+            
+            // Update icon
+            const icon = this.querySelector('i');
+            if (dropdown.classList.contains('hidden')) {
+                icon.setAttribute('data-feather', 'menu');
+            } else {
+                icon.setAttribute('data-feather', 'x');
+            }
+            feather.replace();
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('mobileDropdown');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!dropdown.classList.contains('hidden') && 
+                !dropdown.contains(event.target) && 
+                !menuBtn.contains(event.target)) {
+                dropdown.classList.add('hidden');
+                const icon = menuBtn.querySelector('i');
+                icon.setAttribute('data-feather', 'menu');
+                feather.replace();
+            }
+        });
+
+        // ====================
+        // UTILITY FUNCTIONS
+        // ====================
+        
+        function shareContact() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'MWIRUTI JNR Contact',
+                    text: 'MWIRUTI JNR - Premium Second Hand Motorcycles\nPhone: 0725 101 417\nEmail: ngethemuigai50@gmail.com\nLocation: Embu Town, Kenya'
+                });
+            } else {
+                alert('Phone: 0725 101 417\nEmail: ngethemuigai50@gmail.com');
+            }
+        }
+
+        // ====================
+        // INITIALIZATION
+        // ====================
+        
+        function init() {
+            // Load data from localStorage
+            loadAllData();
+            
+            // Render everything
+            renderMotorcycles();
+            renderTestimonials();
+            renderPhotoPreview();
+            
+            // Setup event listeners
+            document.getElementById('addNewBikeBtn').addEventListener('click', addNewMotorcycle);
+            
+            // Initialize feather icons
+            feather.replace();
+            
+            // Save before page unload
+            window.addEventListener('beforeunload', saveAllData);
+            
+            // Auto-save every 30 seconds as backup
+            setInterval(saveAllData, 30000);
+            
+            console.log('MWIRUTI JNR initialized with localStorage persistence');
+        }
+
+        // Start everything when page loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
